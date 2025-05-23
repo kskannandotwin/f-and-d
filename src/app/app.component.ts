@@ -9,6 +9,12 @@ import { DirectivesComponent } from './directives/directives.component';
     // UserComponent,
     // DataBindingComponent,
     DirectivesComponent],
+import { UserComponent } from './user/user.component';
+import { DataBindingComponent } from './data-binding/data-binding.component';
+
+@Component({
+  selector: 'app-root',
+  imports: [RouterOutlet, DataBindingComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
