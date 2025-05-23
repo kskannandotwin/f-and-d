@@ -1,0 +1,29 @@
+<div align="center">
+    <h4>One way data binding</h4>
+    <div>
+        <p>1. Interpolation</p>
+        <p><b>{{ topic }}</b> from {{ name }}</p>
+    </div>
+    <div>
+        <p>2. Property Binding</p>
+        <input type="text" name="" id="" [value]="topic" />
+        <div>
+            <img [src]="image" alt="" />
+        </div>
+    </div>
+    <div>
+        <p>3. Event Binding</p>
+        <button (click)="onSave()">Click me</button>&nbsp;
+
+        <select (change)="onChange()">
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="Japan">Japan</option>
+            <option value="China">China</option>
+        </select>
+        <h4>Two way data binding</h4>
+        <div>
+            <input type="text" [(ngModel)]="topic" />
+            {{ topic }}
+        </div>
+    </div>
