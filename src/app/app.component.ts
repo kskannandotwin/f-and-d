@@ -1,5 +1,5 @@
 import { Attribute, Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { DirectivesComponent } from './directives/directives.component';
 import { UserComponent } from './user/user.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
@@ -14,7 +14,9 @@ import { LinkedSignalComponent } from './linked-signal/linked-signal.component';
   selector: 'app-root',
   imports: [
     RouterOutlet,
-    LinkedSignalComponent,
+    RouterLink,
+    RouterLinkActive,
+    // LinkedSignalComponent,
     // SignalsComponent,
     // AttributeDirectivesComponent,
     // DirectivesComponent,
