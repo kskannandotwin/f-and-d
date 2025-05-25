@@ -5,6 +5,7 @@ import { AttributeDirectivesComponent } from './attribute-directives/attribute-d
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { StructuralDirectiveNgifVsIfComponent } from './structural-directive-ngif-vs-if/structural-directive-ngif-vs-if.component';
 import { BuiltInPipesComponent } from './built-in-pipes/built-in-pipes.component';
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'user', pathMatch: 'full' },
@@ -13,5 +14,6 @@ export const routes: Routes = [
     { path: 'structural-directive', component: StructuralDirectiveNgifVsIfComponent },
     { path: 'attribute-directive', component: AttributeDirectivesComponent },
     { path: 'built-in-pipes', component: BuiltInPipesComponent },
+    { path: 'tdf', component: TemplateDrivenFormComponent },
     { path: '**', component: PageNotFoundComponent } // Wildcard route for a 404 page or redirect
 ];
