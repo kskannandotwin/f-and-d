@@ -3,27 +3,69 @@
         <h2 class="text-center m-2">Reactive Form : User Information</h2>
         <div class="form-group m-2">
             <label>First Name</label>
-            <input type="text" class="form-control" placeholder="Enter first name" formControlName="firstName" required>
+            <input type="text" class="form-control" placeholder="Enter first name" formControlName="firstName">
+            @if((reactiveForm.controls['firstName'].dirty || reactiveForm.controls['firstName'].touched)){
+            @if(reactiveForm.controls['firstName'].errors?.['required']){
+            <small class="text-danger">First name is required.</small>
+            }
+            @if(reactiveForm.controls['firstName'].errors?.['pattern']){
+            <small class="text-danger">Last name does not match the required pattern.</small>
+            }
+            }
         </div>
 
         <div class="form-group m-2">
             <label>Last Name</label>
             <input type="text" class="form-control" placeholder="Enter last name" formControlName="lastName">
+            @if((reactiveForm.controls['lastName'].dirty || reactiveForm.controls['lastName'].touched)){
+            @if(reactiveForm.controls['lastName'].errors?.['required']){
+            <small class="text-danger">Last name is required.</small>
+            }
+            @if(reactiveForm.controls['lastName'].errors?.['minlength']){
+            <small class="text-danger">The minimum length of the first name should be 10.</small>
+            }
+            }
         </div>
 
         <div class="form-group m-2">
             <label>Email</label>
             <input type="email" class="form-control" placeholder="Enter email address" formControlName="email">
+            @if((reactiveForm.controls['email'].dirty || reactiveForm.controls['email'].touched)){
+            @if(reactiveForm.controls['email'].errors?.['required']){
+            <small class="text-danger">Email address is required.</small>
+            }
+            @if(reactiveForm.controls['email'].errors?.['maxlength']){
+            <small class="text-danger">The maximum length should not exceed 15 characters.</small>
+            }
+            @if(reactiveForm.controls['email'].errors?.['email']){
+            <small class="text-danger">Please enter a valid email address.</small>
+            }
+            }
         </div>
 
         <div class="form-group m-2">
             <label>Password</label>
             <input type="password" class="form-control" placeholder="Enter password" formControlName="password">
+            @if((reactiveForm.controls['password'].dirty || reactiveForm.controls['password'].touched)){
+            @if(reactiveForm.controls['password'].errors?.['required']){
+            <small class="text-danger">Password is required.</small>
+            }            
+            }
         </div>
 
         <div class="form-check m-2">
             <input type="checkbox" class="form-check-input" formControlName="isChecked">
             <label>Check me out</label>
+        </div>
+
+        <div class="form-group m-2" formArrayName="skills">
+            <button class="btn btn-primary" (click)="addSkill()">Add Skill</button>
+            <div *ngFor="let skill of skills.controls; let i = index">
+                <div [formGroupName]="i">
+                    {{ i + 1}} Skill name: <input type="text" formControlName="skill">
+                    <button (click)="deleteSkill(i)">Delete</button>
+                </div>
+            </div>
         </div>
 
         <div class="m-2" formGroupName="address">
