@@ -1,5 +1,12 @@
 <div align="center">
-    <h4>One way data binding</h4>
+    @if (isEligible) {
+    <h4 class="text-success">You are eligible for a premium subscription!</h4>
+    }@else {
+    <h4 class="text-danger">You are not eligible for a premium subscription.</h4>
+    }
+    <h2>User Name = {{ dummyData.userName }}</h2>
+
+    <!-- <h4>One way data binding</h4>
     <div>
         <p>1. Interpolation</p>
         <p><b>{{ topic }}</b> from {{ name }}</p>
@@ -26,4 +33,5 @@
             <input type="text" [(ngModel)]="topic" />
             {{ topic }}
         </div>
-    </div>
+    </div> -->
+</div>

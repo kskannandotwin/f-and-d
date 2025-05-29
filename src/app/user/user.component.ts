@@ -34,7 +34,7 @@ export class UserComponent
     OnDestroy
 {
   constructor(private router: Router) {
-    console.log('constructor called');
+    // console.log('constructor called');
   }
   login() {
     // user verification logic
@@ -43,38 +43,38 @@ export class UserComponent
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log('1. ngOnChanges called', changes);
+    // console.log('1. ngOnChanges called', changes);
   }
 
   ngAfterContentInit(): void {
     // use for ng content
-    console.log('4. ngAfterContentInit called');
+    // console.log('4. ngAfterContentInit called');
   }
 
   ngAfterContentChecked(): void {
-    console.log('5. ngAfterContentChecked called');
+    // console.log('5. ngAfterContentChecked called');
   }
 
   ngAfterViewInit(): void {
     // use for view child
-    console.log('6. ngAfterViewInit called');
+    // console.log('6. ngAfterViewInit called');
   }
 
   ngAfterViewChecked(): void {
-    console.log('7. ngAfterViewChecked called');
+    // console.log('7. ngAfterViewChecked called');
   }
 
   ngOnInit(): void {
     // use for api call
-    console.log('2. ngOnInit called');
+    // console.log('2. ngOnInit called');
   }
 
   ngDoCheck(): void {
     // use for every change detection
-    console.log('3. ngDoCheck called');
+    // console.log('3. ngDoCheck called');
   }
 
   ngOnDestroy(): void {
-    console.log('8. ngOnDestroy called');
+    // console.log('8. ngOnDestroy called');
   }
 }

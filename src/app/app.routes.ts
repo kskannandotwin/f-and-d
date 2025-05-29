@@ -7,10 +7,12 @@ import { StructuralDirectiveNgifVsIfComponent } from './structural-directive-ngi
 import { BuiltInPipesComponent } from './built-in-pipes/built-in-pipes.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { ProfileComponent } from './profile/profile.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'user', pathMatch: 'full' },
     { path: 'user', component: UserComponent },
+    { path: 'profile', component: ProfileComponent },
     { path: 'data-binding', component: DataBindingComponent },
     { path: 'structural-directive', component: StructuralDirectiveNgifVsIfComponent },
     { path: 'attribute-directive', component: AttributeDirectivesComponent },
