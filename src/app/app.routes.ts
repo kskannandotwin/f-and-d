@@ -8,6 +8,7 @@ import { BuiltInPipesComponent } from './built-in-pipes/built-in-pipes.component
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { ProfileComponent } from './profile/profile.component';
+import { CRUDComponent } from './crud/crud.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'user', pathMatch: 'full' },
@@ -19,5 +20,6 @@ export const routes: Routes = [
     { path: 'built-in-pipes', component: BuiltInPipesComponent },
     { path: 'tdf', component: TemplateDrivenFormComponent },
     { path: 'rf', component: ReactiveFormComponent },
+    { path: 'crud', component: CRUDComponent },
     { path: '**', component: PageNotFoundComponent } // Wildcard route for a 404 page or redirect
 ];
