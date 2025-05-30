@@ -28,4 +28,8 @@ export class CRUDComponent implements OnInit {
   addNewUser() {
     this.router.navigateByUrl('adduser');
   }
+
+  onUpdate() {
+    this.router.navigateByUrl('updateuser');
+  }
 }
