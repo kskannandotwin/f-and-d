@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
   styleUrl: './crud.component.scss',
 })
 export class CRUDComponent implements OnInit {
-  constructor(private crud: CrudService, private router: Router) { }
+  constructor(private crud: CrudService, private router: Router) {}
 
   apiData: Iuser[] = [];
 
@@ -29,7 +29,7 @@ export class CRUDComponent implements OnInit {
     this.router.navigateByUrl('adduser');
   }
 
-  onUpdate() {
-    this.router.navigateByUrl('updateuser');
+  onUpdate(id: number) {
+    this.router.navigate(['updateuser', id]);
   }
 }

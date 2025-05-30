@@ -25,7 +25,7 @@ export const routes: Routes = [
     { path: 'rf', component: ReactiveFormComponent },
     { path: 'crud', component: CRUDComponent },
     { path: 'adduser', component: AddUserComponent },
-    { path: 'updateuser', component: UpdateUserComponent },
+    { path: 'updateuser/:id', component: UpdateUserComponent },
     { path: 'viewuser', component: ViewUserComponent },
     { path: '**', component: PageNotFoundComponent } // Wildcard route for a 404 page or redirect
 ];
