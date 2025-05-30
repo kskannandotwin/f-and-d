@@ -1,22 +1,22 @@
 {
-    "Users": [
-        {
-        "id": 1,
-        "name": "Shivam",
-        "username": "shivam",
-        "email": "shimvam@gmail.com"
-        },
-        {
-        "id": 2,
-        "name": "Ganesh",
-        "username": "ganesh",
-        "email": "ganesh@gmail.com"
-        },
-        {
-        "id": 3,
-        "name": "Shubham",
-        "username": "shubham",
-        "email": "shubham@gmail.com"
-        }
-    ]
+  "Users": [
+    {
+      "id": "1",
+      "name": "Shivam",
+      "username": "shivam",
+      "email": "shimvam@gmail.com"
+    },
+    {
+      "id": "2",
+      "name": "Ganesh",
+      "username": "ganesh",
+      "email": "ganesh@gmail.com"
+    },
+    {
+      "id": "3",
+      "name": "Shubham",
+      "username": "shubham",
+      "email": "shubham@gmail.com"
+    }
+  ]
 }
