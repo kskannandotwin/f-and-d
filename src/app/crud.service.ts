@@ -25,4 +25,8 @@ export class CrudService {
   putDataById(id: number, data: Iuser) {
     return this.http.put(`${this.base_url}/${id}`, data);
   }
+
+  deleteData(id: number) {
+    return this.http.delete(`${this.base_url}/${id}`);
+  }
 }

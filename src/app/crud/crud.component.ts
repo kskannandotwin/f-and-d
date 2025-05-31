@@ -36,4 +36,11 @@ export class CRUDComponent implements OnInit {
   onView(id: number) {
     this.router.navigate(['viewuser', id]);
   }
+
+  onDelete(id: number) {
+    this.crud.deleteData(id).subscribe(res => {
+      alert('User deleted successfully');
+      this.getAllData();
+    });
+  }
 }
