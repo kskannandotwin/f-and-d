@@ -2,9 +2,9 @@
   "Users": [
     {
       "id": "1",
-      "name": "Shivam",
-      "username": "shivam",
-      "email": "shimvam@gmail.com"
+      "name": "Shiva",
+      "username": "shiva",
+      "email": "shiva@gmail.com"
     },
     {
       "id": "2",
@@ -17,6 +17,24 @@
       "name": "Shubham",
       "username": "shubham",
       "email": "shubham@gmail.com"
+    },
+    {
+      "id": "69e7",
+      "name": "Vishal",
+      "username": "vishal",
+      "email": "vishal@gmail.com"
+    },
+    {
+      "id": "c3ba",
+      "name": "Mani",
+      "username": "mani",
+      "email": "mani@gmail.com"
+    },
+    {
+      "id": "c3ba",
+      "name": "Mani",
+      "username": "mani",
+      "email": "mani@gmail.com"
     }
   ]
 }

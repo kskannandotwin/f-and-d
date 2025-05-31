@@ -8,7 +8,7 @@ import { Iuser } from './iuser';
 export class CrudService {
   base_url: string = 'http://localhost:3000/Users';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getData() {
     return this.http.get<Iuser[]>(this.base_url);
@@ -19,6 +19,10 @@ export class CrudService {
   }
 
   getDataById(id: number) {
-    return this.http.get<Iuser>(this.base_url + '/' + id);
+    return this.http.get<Iuser>(`${this.base_url}/${id}`);
+  }
+
+  putDataById(id: number, data: Iuser) {
+    return this.http.put(`${this.base_url}/${id}`, data);
   }
 }
