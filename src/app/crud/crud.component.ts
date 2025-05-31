@@ -32,4 +32,8 @@ export class CRUDComponent implements OnInit {
   onUpdate(id: number) {
     this.router.navigate(['updateuser', id]);
   }
+
+  onView(id: number) {
+    this.router.navigate(['viewuser', id]);
+  }
 }
