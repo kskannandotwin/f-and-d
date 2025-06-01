@@ -2,15 +2,18 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CrudService } from '../crud.service';
+import { ReusableComponent } from '../reusable/reusable.component';
 
 
 @Component({
   selector: 'app-add-user',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, ReusableComponent],
   templateUrl: './add-user.component.html',
   styleUrl: './add-user.component.scss'
 })
 export class AddUserComponent {
+
+  parentProperty: string = 'Add User : Kindly add the user dtails';
 
   addUserForm: FormGroup;
 
