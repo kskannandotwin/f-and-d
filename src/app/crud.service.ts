@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Iuser } from './iuser';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -10,8 +11,12 @@ export class CrudService {
 
   constructor(private http: HttpClient) { }
 
-  getData() {
-    return this.http.get<Iuser[]>(this.base_url);
+  // getData() {
+  //   return this.http.get<Iuser[]>(this.base_url);
+  // }
+
+  getData(): Observable<Iuser[]> {
+    return of([]); // Returns an observable of an empty array
   }
 
   postData(data: Iuser) {
