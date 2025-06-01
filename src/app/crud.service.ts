@@ -11,13 +11,13 @@ export class CrudService {
 
   constructor(private http: HttpClient) { }
 
-  getData() {
-    return this.http.get<Iuser[]>(this.base_url);
-  }
-
-  // getData(): Observable<Iuser[]> {
-  //   return of([]); // Returns an observable of an empty array
+  // getData() {
+  //   return this.http.get<Iuser[]>(this.base_url);
   // }
+
+  getData(): Observable<Iuser[]> {
+    return of([]); // Returns an observable of an empty array
+  }
 
   postData(data: Iuser) {
     return this.http.post(this.base_url, data);

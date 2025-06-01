@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { CrudService } from '../crud.service';
 import { Iuser } from '../iuser';
 import { CommonModule } from '@angular/common';
@@ -12,6 +12,8 @@ import { ReusableComponent } from '../reusable/reusable.component';
   styleUrl: './crud.component.scss',
 })
 export class CRUDComponent implements OnInit {
+  // parameter decorators
+  // constructor(@Inject(CrudService) private crud: CrudService, private router: Router) { }
   constructor(private crud: CrudService, private router: Router) { }
 
   parentProperty: string = 'CRUD Operations : Kindly find all users';
