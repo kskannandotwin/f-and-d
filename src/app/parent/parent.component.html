@@ -39,4 +39,16 @@
             <app-sibling2 [sibling2Property]="sibling1Data" (sibling2Event)="receiveEvent2($event)"></app-sibling2>
         </div>
     </div>
+
+    <div class="row m-2">
+        <div class="col-">
+            <div class="text-warning">
+                <h2>Example of 4 (Parent -> Child using ViewChild)</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="row m-2">
+        <app-reusable #reusable></app-reusable>
+    </div>
 </div>

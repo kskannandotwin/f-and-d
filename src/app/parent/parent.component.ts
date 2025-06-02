@@ -1,19 +1,27 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { ChildComponent } from '../child/child.component';
 import { Sibling1Component } from '../sibling1/sibling1.component';
 import { Sibling2Component } from '../sibling2/sibling2.component';
+import { ReusableComponent } from '../reusable/reusable.component';
 
 @Component({
   selector: 'app-parent',
-  imports: [ChildComponent, Sibling1Component, Sibling2Component],
+  imports: [
+    ChildComponent,
+    Sibling1Component,
+    Sibling2Component,
+    ReusableComponent,
+  ],
   templateUrl: './parent.component.html',
-  styleUrl: './parent.component.scss'
+  styleUrl: './parent.component.scss',
 })
-export class ParentComponent {
+export class ParentComponent implements AfterViewInit {
   parentProperty: string = 'This is the parent component data';
   receiveMessage: string = '';
   sibling1Data: any = '';
   sibling2Data: any = '';
+
+  @ViewChild('reusable') reusableComp!: ReusableComponent;
 
   receiveData(data: any) {
     this.receiveMessage = data;
@@ -27,5 +35,9 @@ export class ParentComponent {
   receiveEvent2(data: any) {
     this.sibling2Data = data;
     console.log(this.sibling2Data);
+  }
+
+  ngAfterViewInit(): void {
+    this.reusableComp.childProperty = 'Greeting from parent component.';
   }
 }
