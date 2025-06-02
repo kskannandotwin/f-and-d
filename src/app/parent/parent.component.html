@@ -1,0 +1,24 @@
+<div class="container text-c">
+    <div class="row m-5">
+        <div class="col-">
+            <div class="text-warning">
+                <h2>Example of 1 & 2 (Parent -> Child & Child -> Parent)</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <div class="text-info">
+                <h2>Parent Component</h2>
+            </div>
+            <div class="text-warning m-3">
+                <h4>{{ receiveMessage }}</h4>
+            </div>
+        </div>
+        <div class="vr p-0"></div>
+        <div class="col-5">
+            <app-child [childInputProperty]="parentProperty" (childOutputProperty)="receiveData($event)"></app-child>
+        </div>
+    </div>
+</div>
