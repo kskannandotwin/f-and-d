@@ -1,4 +1,4 @@
-<div class="container text-c">
+<div class="container text-center">
     <div class="row m-5">
         <div class="col-">
             <div class="text-warning">
@@ -19,6 +19,24 @@
         <div class="vr p-0"></div>
         <div class="col-5">
             <app-child [childInputProperty]="parentProperty" (childOutputProperty)="receiveData($event)"></app-child>
+        </div>
+    </div>
+
+    <div class="row m-5">
+        <div class="col-">
+            <div class="text-warning text-center">
+                <h2>Example of 3 (Sibling Components)</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <app-sibling1 (sibling1Event)="receiveEvent1($event)" [sibling1Property]="sibling2Data"></app-sibling1>
+        </div>
+        <div class="vr p-0"></div>
+        <div class="col-5">
+            <app-sibling2 [sibling2Property]="sibling1Data" (sibling2Event)="receiveEvent2($event)"></app-sibling2>
         </div>
     </div>
 </div>
