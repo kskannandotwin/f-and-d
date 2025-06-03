@@ -17,4 +17,24 @@
     @if(sessionValue) {
         <h6>Session Value : {{ sessionValue }}</h6>
     }
+    <hr>
+    <h4 class="text-info">Local Storage</h4>
+    <div class="row m-4">
+        <div class="col-3">
+            <button class="btn btn-success" (click)="setLocal()">Set Local</button>
+        </div>
+        <div class="col-3">
+            <button class="btn btn-success" (click)="getLocal()">Get Local</button>
+        </div>
+        <div class="col-3">
+            <button class="btn btn-success" (click)="removeLocal()">Remove Local</button>
+        </div>
+        <div class="col-3">
+            <button class="btn btn-success" (click)="clearLocal()">Clear Local</button>
+        </div>
+    </div>
+    @if(localValue) {
+        <h6>Local Value : {{ localValue }}</h6>
+    }
+
 </div>
