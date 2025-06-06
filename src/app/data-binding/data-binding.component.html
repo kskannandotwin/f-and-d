@@ -1,29 +1,93 @@
-<div align="center">
-    <h4>One way data binding</h4>
-    <div>
-        <p>1. Interpolation</p>
-        <p><b>{{ topic }}</b> from {{ name }}</p>
-    </div>
-    <div>
-        <p>2. Property Binding</p>
-        <input type="text" name="" id="" [value]="topic" />
-        <div>
-            <img [src]="image" alt="" />
-        </div>
-    </div>
-    <div>
-        <p>3. Event Binding</p>
-        <button (click)="onSave()">Click me</button>&nbsp;
+<h2>Interpolation Examples</h2>
 
-        <select (change)="onChange()">
-            <option value="India">India</option>
-            <option value="USA">USA</option>
-            <option value="Japan">Japan</option>
-            <option value="China">China</option>
-        </select>
-        <h4>Two way data binding</h4>
-        <div>
-            <input type="text" [(ngModel)]="topic" />
-            {{ topic }}
-        </div>
-    </div>
+<p>My name is: {{ name }}</p>
+<p>Age: {{ age }}</p>
+<p>Age + 5: {{ getAgePlusFive() }}</p>
+
+<!-- Property Binding Examples -->
+<h2>Property Binding Examples</h2>
+
+<!-- Image source binding -->
+<img [src]="imageUrl" alt="Angular Logo">
+
+<!-- Button disabled property binding -->
+<button [disabled]="isDisabled">Click Me</button>
+
+<!-- Class binding -->
+<div [class]="buttonClass">Styled div</div>
+
+<!-- Style binding -->
+<p [style.color]="titleColor">Colored text</p>
+
+<!-- Multiple style binding -->
+<div [style]="{
+  color: titleColor,
+  fontWeight: 'bold',
+  marginTop: '20px'
+}">
+  Multiple styles
+</div>
+
+<!-- Event Binding Examples -->
+<h2>Event Binding Examples</h2>
+
+<!-- Click event -->
+<button (click)="onClick()">Click me! Clicks: {{clickCount}}</button>
+
+<!-- Mouse over event -->
+<div (mouseover)="onMouseOver()">Hover over me</div>
+
+<!-- Input event -->
+<input (input)="onInputChange($event)" placeholder="Type something">
+<p>You typed: {{inputText}}</p>
+
+<!-- Form submit event -->
+<form (submit)="onSubmit($event)">
+  <button type="submit">Submit Form</button>
+</form>
+
+<!-- Two-Way Data Binding Examples -->
+<h2>Two-Way Data Binding Examples</h2>
+
+<div>
+  <label>Username:</label>
+  <input [(ngModel)]="username" placeholder="Enter username">
+  <p>You entered: {{username}}</p>
+</div>
+
+<div>
+  <label>Email:</label>
+  <input [(ngModel)]="email" type="email" placeholder="Enter email">
+  <p>You entered: {{email}}</p>
+</div>
+
+<div>
+  <label>Message:</label>
+  <textarea [(ngModel)]="message" placeholder="Enter message"></textarea>
+  <p>You entered: {{message}}</p>
+</div>
+
+<!-- Two-Way Data Binding with Form Submit -->
+<h2>Form Submission Example</h2>
+
+<form (submit)="onSubmit($event)">
+  <div>
+    <label>Username:</label>
+    <input [(ngModel)]="username" name="username" placeholder="Enter username">
+    <p>You entered: {{username}}</p>
+  </div>
+
+  <div>
+    <label>Email:</label>
+    <input [(ngModel)]="email" name="email" type="email" placeholder="Enter email">
+    <p>You entered: {{email}}</p>
+  </div>
+
+  <div>
+    <label>Message:</label>
+    <textarea [(ngModel)]="message" name="message" placeholder="Enter message"></textarea>
+    <p>You entered: {{message}}</p>
+  </div>
+
+  <button type="submit">Submit Form</button>
+</form>
